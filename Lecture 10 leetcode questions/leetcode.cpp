@@ -99,3 +99,61 @@ vector<vector<int>> pairSum(vector<int> &arr, int s) {
   sort(ans.begin(), ans.end());
   return ans;
 }
+
+// Sort 0s and 1s
+// Did on an online compiler
+// Online C++ compiler to run C++ program online
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// void printArr(int *arr, int size){
+//     for(int i=0;i<size;i++){
+//         cout << arr[i] << " ";
+//     }
+// }
+// void sort01(int *arr, int size){
+//     int i=0;
+//     int j=size-1;
+//         while(i<j){
+//             if(arr[i]==0){
+//                 i++;
+//             }
+//             else if(arr[j]==1){
+//                 j--;
+//             }
+//             else if(arr[i]==1 && arr[j]==0){
+//                 swap(arr[i],arr[j]);
+//                 i++;
+//                 j--;
+//             }
+//         }
+//     printArr(arr,5);
+// }
+// int main() {
+//     // Write C++ code here
+//     int arr[10]={0,1,1,0,1};
+//     sort01(arr,5);
+//     return 0;
+// }
+
+// ***********Homework -> Sort 0s 1s and 2s**********
+// #include <bits/stdc++.h>
+// void sort012(int *arr, int n)
+// {
+//    //   Write your code here
+//    int i=0,j=0,k=n-1;
+//    while(j<=k){
+//       if(arr[j]==0){
+//          swap(arr[i],arr[j]);
+//          i++;
+//          j++;
+//       }
+//       else if(arr[j]==1){
+//          j++;
+//       }
+//       else{
+//          swap(arr[j],arr[k]);
+//          k--;
+//       }
+//    }
+// }
