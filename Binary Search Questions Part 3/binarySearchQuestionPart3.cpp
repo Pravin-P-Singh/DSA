@@ -42,3 +42,44 @@
 //     }
 //     return ans;
 // }
+
+//************************************************
+// Painter Partition Problem
+// bool isPossibleSol(vector<int> &boards, int mid ,int k){
+//     int PainterCount = 1;
+//     int PaintingCheck = 0;
+//     for(int i = 0; i<boards.size() ; i++){
+//         if(PaintingCheck + boards[i]<=mid){
+//             PaintingCheck+=boards[i];
+//         }
+//         else{
+//             PainterCount++; //painter count badha diya kyuki upar limit reach kargaya tha
+//             if(PainterCount>k || boards[i]>mid){ //agar paintercount total number of painters se zyada hogaya ya fir next board element mid se bada hai to false return kardo aur boards vector ke right side mai jao s = mid+1 karke
+//                 return false;
+//             }
+//             PaintingCheck = boards[i];
+//         }
+//     }
+//     return true;
+// }
+// int findLargestMinDistance(vector<int> &boards, int k)
+// {
+//     //Write your code here.
+//     int s = 0,sum = 0, ans = -1;
+//     for(int i = 0; i < boards.size();i++){
+//         sum+=boards[i];
+//     }
+//     int e = sum;
+//     int mid = s+(e-s)/2;
+//     while(s<=e){
+//         if(isPossibleSol(boards,mid,k)){
+//             ans = mid;
+//             e = mid-1;
+//         }       
+//         else{
+//             s = mid+1;
+//         }
+//         mid = s+ (e-s)/2;
+//     }
+//     return mid;
+// }
